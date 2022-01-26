@@ -23,18 +23,22 @@
 
     <main>
         <div class="contenitore-main">
-            <?php foreach($database as $single_disk){ ?>
-                <?php var_dump($single_disk);?>
-            <?php}?>  
+        <?php foreach($database as $single_disk){ ?>
+               <div class="single-disk">
+                    <div class="image">
+                        <img src="<?php echo $single_disk['poster']?>" alt="">
+                    </div>
+                    <div class="titolo">
+                        <h4><?php echo $single_disk['title'] ?></h4>
+                    </div>
+                    <div class="autore">
+                        <h5><?php echo $single_disk['author']?></h5>
+                        <h5><?php echo $single_disk['year']?></h5>
 
-            <div class="single-disk">
-                <div class="image">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="prova">
-                </div>
-                <div class="contenuti">
-                        <h4>Prova</h4>
-                </div>
-            </div>
+                    </div>
+               </div>
+       <?php }?>  
+           
         </div>
     </main>
 </body>
